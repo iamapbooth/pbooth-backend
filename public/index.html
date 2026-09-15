@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pbooth</title>
+</head>
+<body>
+<section>
+  <label for="deviceSelect">Camera:</label>
+  <select id="deviceSelect"></select>
+
+  <label for="filterSelect">Filter:</label>
+  <select id="filterSelect">
+    <option value="none">None</option>
+    <option value="grayscale">Grayscale</option>
+    <option value="sepia">Sepia</option>
+    <option value="invert">Invert</option>
+    <option value="blur">Blur</option>
+    <option value="contrast">High Contrast</option>
+    <option value="saturate">Saturate</option>
+    <option value="huerotate">Hue Rotate</option>
+  </select>
+
+  <label for="mirrorToggle">Mirror:</label>
+  <input type="checkbox" id="mirrorToggle" checked>
+
+  <button id="startButton">Start</button>
+  <button id="captureButton" disabled>Take Photo</button>
+</section>
+
+<hr>
+
+<canvas id="canvas" width="1280" height="720"></canvas>
+<video id="video" autoplay playsinline muted width="1" height="1"></video>
+
+<hr>
+
+<h2>Debug</h2>
+<pre id="debug">waiting for camera...</pre>
+
+<hr>
+
+<h2>Last Capture</h2>
+<div id="lastCapture">none yet</div>
+
+<h2>Gallery</h2>
+<button id="refreshGalleryButton">Refresh</button>
+<div id="gallery"></div>
+
+<script src="/clie.js"></script>
+</body>
+</html>
